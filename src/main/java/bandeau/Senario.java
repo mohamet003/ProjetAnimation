@@ -14,7 +14,24 @@ import java.util.List;
  */
 public class Senario {
     List<TypeEffect> ListeTypeDeffect = new  LinkedList<>();
+
+    public Senario() {
+    }
     
     
     
+    
+    public void AddEffect(TypeEffect effect,int repetition){
+        
+        for (int i = 0; i < repetition; i++) {
+            ListeTypeDeffect.add(effect);
+        }
+    }
+    
+    
+    public void playOn(Bandeau b){
+        ListeTypeDeffect.forEach(effect->{
+            effect.AfficherSur(b);
+        });
+    }    
 }

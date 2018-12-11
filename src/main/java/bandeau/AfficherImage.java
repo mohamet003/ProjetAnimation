@@ -5,15 +5,20 @@
  */
 package bandeau;
 
-/** 
+import java.io.File;
+import javax.imageio.ImageIO;
+
+/**
  *
  * @author mkone03
  */
-public abstract  class TypeEffect {
+public class AfficherImage extends TypeEffect{
 
-    public TypeEffect() {
+    @Override
+    public void AfficherSur(Bandeau b) {
+        
     }
     
     
-    public abstract void AfficherSur(Bandeau b);
+    
 }

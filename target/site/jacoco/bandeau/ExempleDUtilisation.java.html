@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExempleDUtilisation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bandeau_Enonce</a> &gt; <a href="index.source.html" class="el_package">bandeau</a> &gt; <span class="el_source">ExempleDUtilisation.java</span></div><h1>ExempleDUtilisation.java</h1><pre class="source lang-java linenums">package bandeau;
+
+import java.awt.Color;
+import java.awt.Font;
+
+<span class="nc" id="L6">public class ExempleDUtilisation {</span>
+<span class="nc" id="L7">    private final Bandeau monBandeau = new Bandeau();</span>
+    
+    public static void main(String[] args) {
+<span class="nc" id="L10">	    new ExempleDUtilisation().exemple();</span>
+<span class="nc" id="L11">    }</span>
+    
+    public void exemple() {
+        
+        
+<span class="nc" id="L16">        Senario s = new Senario();</span>
+<span class="nc" id="L17">        RotationZoom rotationZoom = new RotationZoom(&quot;je tourne&quot;,100);</span>
+<span class="nc" id="L18">        Rainbow r = new Rainbow(&quot;mes couleurs&quot;,1000);</span>
+<span class="nc" id="L19">        s.AddEffect(r, 1);</span>
+<span class="nc" id="L20">        s.AddEffect(rotationZoom, 1);</span>
+<span class="nc" id="L21">        s.playOn(monBandeau);</span>
+        
+        
+        /*
+        Font font = monBandeau.getFont();
+        Color back = monBandeau.getBackground();
+        Color fore = monBandeau.getForeground();
+
+        monBandeau.setMessage(&quot;Hello&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;On va changer de police&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;Monospaced 15 Bold&quot;);
+		monBandeau.setFont(new Font(&quot;Monospaced&quot;, Font.BOLD, 15));
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;SansSerif 15&quot;);
+		monBandeau.setFont(new Font(&quot;SansSerif&quot;, Font.PLAIN, 15));
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;On va zoomer&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;Zoom........&quot;);
+		for (int i = 5; i &lt; 60 ; i+=5) {
+			monBandeau.setFont(new Font(&quot;Dialog&quot;, Font.BOLD, 5+i));
+			monBandeau.sleep(100);
+		}
+		monBandeau.sleep(1000);
+
+		monBandeau.setFont(new Font(&quot;Courier new&quot;, Font.PLAIN, 15));
+		monBandeau.setMessage(&quot;On va tourner&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setMessage(&quot;On tourne...&quot;);
+		for (int i = 0; i &lt;= 100; i++) {
+			monBandeau.setRotation(2*Math.PI*i / 100);
+			monBandeau.sleep(100);
+		}
+
+		monBandeau.setMessage(&quot;On va changer de couleur de fond&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setBackground(Color.DARK_GRAY);
+		monBandeau.setMessage(&quot;On va changer de couleur&quot;);
+		monBandeau.sleep(1000);
+		monBandeau.setForeground(Color.YELLOW);
+		monBandeau.sleep(1000);
+		monBandeau.setFont(font);
+		monBandeau.setForeground(fore);
+		monBandeau.setBackground(back);
+		monBandeau.setMessage(&quot;Termine&quot;);*/
+		//System.exit(0);
+<span class="nc" id="L69">   }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

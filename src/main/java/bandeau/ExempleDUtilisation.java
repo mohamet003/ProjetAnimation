@@ -11,6 +11,17 @@ public class ExempleDUtilisation {
     }
     
     public void exemple() {
+        
+        
+        Senario s = new Senario();
+        RotationZoom rotationZoom = new RotationZoom("je tourne",100);
+        Rainbow r = new Rainbow("mes couleurs",1000);
+        s.AddEffect(r, 1);
+        s.AddEffect(rotationZoom, 1);
+        s.playOn(monBandeau);
+        
+        
+        /*
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
@@ -53,7 +64,7 @@ public class ExempleDUtilisation {
 		monBandeau.setFont(font);
 		monBandeau.setForeground(fore);
 		monBandeau.setBackground(back);
-		monBandeau.setMessage("Termine");
+		monBandeau.setMessage("Termine");*/
 		//System.exit(0);
    }
 }
