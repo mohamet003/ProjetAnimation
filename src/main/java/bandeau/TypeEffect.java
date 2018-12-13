@@ -10,8 +10,12 @@ package bandeau;
  * @author mkone03
  */
 public abstract  class TypeEffect {
+    String message;
+    int del;
 
-    public TypeEffect() {
+    public TypeEffect(String m, int del) {
+        message=m;
+        this.del=del;
     }
     
     

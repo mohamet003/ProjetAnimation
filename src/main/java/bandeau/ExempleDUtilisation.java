@@ -13,9 +13,11 @@ public class ExempleDUtilisation {
     public void exemple() {
         
         
-        Senario s = new Senario();
+        Scenario s = new Scenario();
         RotationZoom rotationZoom = new RotationZoom("je tourne",100);
         Rainbow r = new Rainbow("mes couleurs",1000);
+        LettreOneByOne byOne = new LettreOneByOne("One by One !",600);
+        s.AddEffect(byOne, 1);
         s.AddEffect(r, 1);
         s.AddEffect(rotationZoom, 1);
         s.playOn(monBandeau);

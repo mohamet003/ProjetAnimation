@@ -12,22 +12,22 @@ import java.awt.Color;
  * @author mkone03
  */
 public class Rainbow extends TypeEffect{
+
+    public Rainbow(String m, int del) {
+<span class="nc" id="L17">        super(m, del);</span>
+<span class="nc" id="L18">    }</span>
     
     
-    String message;
-    int del;
+  
     
-    
-<span class="nc" id="L21">    public Rainbow(String message,int del) {</span>
-<span class="nc" id="L22">        this.message = message;</span>
-<span class="nc" id="L23">        this.del=del;</span>
-<span class="nc" id="L24">    }</span>
    
       
 
     @Override
     public void AfficherSur(Bandeau b) {
-<span class="nc" id="L30">        b.setMessage(message);</span>
+        
+<span class="nc" id="L29">        b.setMessage(message);</span>
+<span class="nc" id="L30">        b.setForeground(Color.WHITE);</span>
 <span class="nc" id="L31">        b.sleep(del);</span>
 <span class="nc" id="L32">        b.setBackground(Color.GREEN);</span>
 <span class="nc" id="L33">        b.sleep(del);</span>

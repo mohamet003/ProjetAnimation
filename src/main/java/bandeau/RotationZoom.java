@@ -12,15 +12,15 @@ import java.awt.Font;
  * @author mkone03
  */
 public class RotationZoom extends TypeEffect{
-    
-    String message;
-    int del;
-    
-    
-    public RotationZoom(String message,int del) {
-        this.message = message;
-        this.del=del;
+  
+   
+
+    public RotationZoom(String m, int del) {
+        super(m, del);
     }
+
+
+
     
     public void PlayOn(Bandeau b,int del){
         

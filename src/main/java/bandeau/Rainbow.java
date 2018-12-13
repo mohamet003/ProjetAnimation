@@ -12,16 +12,14 @@ import java.awt.Color;
  * @author mkone03
  */
 public class Rainbow extends TypeEffect{
-    
-    
-    String message;
-    int del;
-    
-    
-    public Rainbow(String message,int del) {
-        this.message = message;
-        this.del=del;
+
+    public Rainbow(String m, int del) {
+        super(m, del);
     }
+    
+    
+  
+    
    
       
 

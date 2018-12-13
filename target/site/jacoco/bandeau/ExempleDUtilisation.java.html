@@ -13,12 +13,14 @@ import java.awt.Font;
     public void exemple() {
         
         
-<span class="nc" id="L16">        Senario s = new Senario();</span>
+<span class="nc" id="L16">        Scenario s = new Scenario();</span>
 <span class="nc" id="L17">        RotationZoom rotationZoom = new RotationZoom(&quot;je tourne&quot;,100);</span>
 <span class="nc" id="L18">        Rainbow r = new Rainbow(&quot;mes couleurs&quot;,1000);</span>
-<span class="nc" id="L19">        s.AddEffect(r, 1);</span>
-<span class="nc" id="L20">        s.AddEffect(rotationZoom, 1);</span>
-<span class="nc" id="L21">        s.playOn(monBandeau);</span>
+<span class="nc" id="L19">        LettreOneByOne byOne = new LettreOneByOne(&quot;One by One !&quot;,600);</span>
+<span class="nc" id="L20">        s.AddEffect(byOne, 1);</span>
+<span class="nc" id="L21">        s.AddEffect(r, 1);</span>
+<span class="nc" id="L22">        s.AddEffect(rotationZoom, 1);</span>
+<span class="nc" id="L23">        s.playOn(monBandeau);</span>
         
         
         /*
@@ -66,6 +68,6 @@ import java.awt.Font;
 		monBandeau.setBackground(back);
 		monBandeau.setMessage(&quot;Termine&quot;);*/
 		//System.exit(0);
-<span class="nc" id="L69">   }</span>
+<span class="nc" id="L71">   }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

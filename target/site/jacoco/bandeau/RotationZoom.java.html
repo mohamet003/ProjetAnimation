@@ -12,15 +12,15 @@ import java.awt.Font;
  * @author mkone03
  */
 public class RotationZoom extends TypeEffect{
-    
-    String message;
-    int del;
-    
-    
-<span class="nc" id="L20">    public RotationZoom(String message,int del) {</span>
-<span class="nc" id="L21">        this.message = message;</span>
-<span class="nc" id="L22">        this.del=del;</span>
-<span class="nc" id="L23">    }</span>
+  
+   
+
+    public RotationZoom(String m, int del) {
+<span class="nc" id="L19">        super(m, del);</span>
+<span class="nc" id="L20">    }</span>
+
+
+
     
     public void PlayOn(Bandeau b,int del){
         
@@ -33,9 +33,10 @@ public class RotationZoom extends TypeEffect{
 <span class="nc" id="L33">            b.setMessage(message);</span>
 <span class="nc bnc" id="L34" title="All 2 branches missed.">            for (int i = 0; i &lt;= 100; i++) {</span>
 <span class="nc" id="L35">                b.setRotation(2*Math.PI*i / 100);</span>
-<span class="nc" id="L36">                b.sleep(del);</span>
+<span class="nc" id="L36">                b.setFont(new Font(&quot;Dialog&quot;, Font.BOLD, 5+i));</span>
+<span class="nc" id="L37">                b.sleep(del);</span>
             }
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L39">    }</span>
     
     
     
