@@ -1,10 +1,5 @@
 package bandeau;
 
-import java.awt.Font;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
 public class ExempleDUtilisation {
     private final Bandeau monBandeau = new Bandeau();
     
@@ -17,16 +12,25 @@ public class ExempleDUtilisation {
         
         
         Scenario s = new Scenario();
-        RotationZoom rotationZoom = new RotationZoom("Bonjour !",50);
-        Rainbow r = new Rainbow("mes couleurs",500);
+        
+        RotationZoom rotationZoom = new RotationZoom("Bienvenu !",50);
+        Rainbow r = new Rainbow("Rainbow !",500);
         LettreOneByOne byOne = new LettreOneByOne("One by One !",300);
-        JeuxDuPendu duPendu = new JeuxDuPendu("meassas", 500);
+        JeuxDuPendu duPendu = new JeuxDuPendu("Hello Tout le monde !", 500);
+        Clignote c = new Clignote("Je clignote !", 200);
+        Defile d = new Defile("Aurevoir", 100);     
+   
         
         s.AddEffect(duPendu,1);
         s.AddEffect(rotationZoom, 1);
         s.AddEffect(byOne, 1);
         s.AddEffect(r, 1);
+        s.AddEffect(c,10);
+        s.AddEffect(d,1);
+        
+        
         s.playOn(monBandeau);
+        
         
         
         /*

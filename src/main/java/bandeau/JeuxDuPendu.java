@@ -5,8 +5,6 @@
  */
 package bandeau;
 
-import java.awt.Font;
-import java.math.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -52,21 +50,7 @@ public class JeuxDuPendu extends TypeEffect {
 
             b.sleep(del);
         }
-
-        /*
-        if (a != 32) {
-
-            for (int j = 3; j < 30; j++) {
-                b.setFont(new Font("Dialog", Font.BOLD, 20 + j));
-                b.setMessage(sous_chaine);
-                b.sleep((int) (del * 0.10));
-            }
-            b.sleep(del);
-
-        } else {
-            b.setMessage(sous_chaine);
-        }
-         */
+        
     }
 
 }

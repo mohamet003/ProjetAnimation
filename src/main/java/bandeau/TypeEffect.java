@@ -20,4 +20,7 @@ public abstract  class TypeEffect {
     
     
     public abstract void AfficherSur(Bandeau b);
+    
+    
+    
 }
