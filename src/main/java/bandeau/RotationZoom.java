@@ -11,35 +11,21 @@ import java.awt.Font;
  *
  * @author mkone03
  */
-public class RotationZoom extends TypeEffect{
-  
-   
+public class RotationZoom extends TypeEffect {
 
     public RotationZoom(String m, int del) {
         super(m, del);
     }
 
-
-
-    
-    public void PlayOn(Bandeau b,int del){
-        
-    }
-
     @Override
     public void AfficherSur(Bandeau b) {
-        
-            
-            b.setMessage(message);
-            for (int i = 0; i <= 100; i++) {
-                b.setRotation(2*Math.PI*i / 100);
-                b.setFont(new Font("Dialog", Font.BOLD, 5+i));
-                b.sleep(del);
-            }
+
+        b.setMessage(message);
+        for (int i = 0; i <= 100; i++) {
+            b.setRotation(2 * Math.PI * i / 100);
+            b.setFont(new Font("Dialog", Font.BOLD, 3 + i));
+            b.sleep(del);
+        }
     }
-    
-    
-    
-    
-    
+
 }

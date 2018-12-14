@@ -13,25 +13,26 @@ import java.util.List;
  * @author mkone03
  */
 public class Scenario {
-    List<TypeEffect> ListeTypeDeffect = new  LinkedList<>();
+
+    List<TypeEffect> ListeTypeDeffect = new LinkedList<>();
+    List<Integer> listRepet = new LinkedList<>();
 
     public Scenario() {
     }
-    
-    
-    
-    
-    public void AddEffect(TypeEffect effect,int repetition){
-        
-        for (int i = 0; i < repetition; i++) {
-            ListeTypeDeffect.add(effect);
-        }
+
+    public void AddEffect(TypeEffect effect, int repetition) {
+
+        ListeTypeDeffect.add(effect);
+        listRepet.add(repetition);
+
     }
-    
-    
-    public void playOn(Bandeau b){
-        ListeTypeDeffect.forEach(effect->{
-            effect.AfficherSur(b);
+
+    public void playOn(Bandeau b) {
+        ListeTypeDeffect.forEach(effect -> {
+            for (int i = 0; i < listRepet.get(ListeTypeDeffect.indexOf(effect)); i++) {
+                effect.AfficherSur(b);
+            }
+
         });
-    }    
+    }
 }
