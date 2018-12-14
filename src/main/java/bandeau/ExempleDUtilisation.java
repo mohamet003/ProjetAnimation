@@ -22,12 +22,17 @@ public class ExempleDUtilisation {
         LettreOneByOne byOne = new LettreOneByOne("One by One !",300);
         JeuxDuPendu duPendu = new JeuxDuPendu("hello !", 500);
         Clignote c = new Clignote("bonjour", 200);
+        Defile d = new Defile("Aurevoir", 100);
+        
+         
         s.AddEffect(c,10);
         s.AddEffect(duPendu,1);
         s.AddEffect(rotationZoom, 1);
         s.AddEffect(byOne, 1);
         s.AddEffect(r, 1);
+        s.AddEffect(d,1);
         s.playOn(monBandeau);
+        
         
         
         /*
