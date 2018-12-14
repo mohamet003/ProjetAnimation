@@ -20,8 +20,9 @@ public class ExempleDUtilisation {
         RotationZoom rotationZoom = new RotationZoom("Bonjour !",50);
         Rainbow r = new Rainbow("mes couleurs",500);
         LettreOneByOne byOne = new LettreOneByOne("One by One !",300);
-        JeuxDuPendu duPendu = new JeuxDuPendu("meassas", 500);
-        
+        JeuxDuPendu duPendu = new JeuxDuPendu("hello !", 500);
+        Clignote c = new Clignote("bonjour", 200);
+        s.AddEffect(c,10);
         s.AddEffect(duPendu,1);
         s.AddEffect(rotationZoom, 1);
         s.AddEffect(byOne, 1);
