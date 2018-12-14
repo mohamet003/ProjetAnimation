@@ -20,11 +20,11 @@ public class ExempleDUtilisation {
         RotationZoom rotationZoom = new RotationZoom("Bonjour !",50);
         Rainbow r = new Rainbow("mes couleurs",500);
         LettreOneByOne byOne = new LettreOneByOne("One by One !",300);
-        JeuxDuPendu duPendu = new JeuxDuPendu("meassas", 500);
+        JeuxDuPendu duPendu = new JeuxDuPendu("Hello Tout le monde !", 500);
         
-        s.AddEffect(duPendu,1);
+        s.AddEffect(duPendu,2);
         s.AddEffect(rotationZoom, 1);
-        s.AddEffect(byOne, 1);
+        s.AddEffect(byOne, 2);
         s.AddEffect(r, 1);
         s.playOn(monBandeau);
         
