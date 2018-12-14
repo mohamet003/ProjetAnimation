@@ -1,5 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Bandeau_Enonce,bandeau,ExempleDUtilisation,52,0,0,0,13,0,3,0,3,0
+Bandeau_Enonce,bandeau,ExempleDUtilisation,62,0,0,0,15,0,3,0,3,0
+Bandeau_Enonce,bandeau,JeuxDuPendu,93,0,6,0,21,0,6,0,3,0
 Bandeau_Enonce,bandeau,TypeEffect,9,0,0,0,4,0,1,0,1,0
 Bandeau_Enonce,bandeau,Bandeau.new Runnable() {...},35,0,0,0,7,0,2,0,2,0
 Bandeau_Enonce,bandeau,LettreOneByOne,83,0,6,0,14,0,5,0,2,0
