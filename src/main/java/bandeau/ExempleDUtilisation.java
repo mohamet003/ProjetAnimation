@@ -19,13 +19,18 @@ public class ExempleDUtilisation {
         
         s.AddEffect(duPendu,2);
         Clignote c = new Clignote("bonjour", 200);
+        Defile d = new Defile("Aurevoir", 100);
+        
+         
         s.AddEffect(c,10);
         s.AddEffect(duPendu,1);
 
         s.AddEffect(rotationZoom, 1);
         s.AddEffect(byOne, 2);
         s.AddEffect(r, 1);
+        s.AddEffect(d,1);
         s.playOn(monBandeau);
+        
         
         
         /*
