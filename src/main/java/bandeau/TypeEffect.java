@@ -5,22 +5,20 @@
  */
 package bandeau;
 
-/** 
+/**
  *
  * @author mkone03
  */
-public abstract  class TypeEffect {
+public abstract class TypeEffect {
+
     String message;
     int del;
 
     public TypeEffect(String m, int del) {
-        message=m;
-        this.del=del;
+        message = m;
+        this.del = del;
     }
-    
-    
+
     public abstract void AfficherSur(Bandeau b);
-    
-    
-    
+
 }

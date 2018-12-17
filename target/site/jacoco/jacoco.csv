@@ -1,11 +1,13 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Bandeau_Enonce,bandeau,ExempleDUtilisation,62,0,0,0,15,0,3,0,3,0
-Bandeau_Enonce,bandeau,JeuxDuPendu,93,0,6,0,21,0,6,0,3,0
+Bandeau_Enonce,bandeau,ExempleDUtilisation,82,0,0,0,19,0,3,0,3,0
+Bandeau_Enonce,bandeau,JeuxDuPendu,90,0,6,0,20,0,6,0,3,0
+Bandeau_Enonce,bandeau,Clignote,35,0,0,0,11,0,2,0,2,0
 Bandeau_Enonce,bandeau,TypeEffect,9,0,0,0,4,0,1,0,1,0
 Bandeau_Enonce,bandeau,Bandeau.new Runnable() {...},35,0,0,0,7,0,2,0,2,0
 Bandeau_Enonce,bandeau,LettreOneByOne,83,0,6,0,14,0,5,0,2,0
-Bandeau_Enonce,bandeau,RotationZoom,39,0,2,0,8,0,3,0,2,0
+Bandeau_Enonce,bandeau,RotationZoom,41,0,2,0,8,0,3,0,2,0
 Bandeau_Enonce,bandeau,Bandeau,63,0,0,0,21,0,12,0,12,0
 Bandeau_Enonce,bandeau,Rainbow,65,0,0,0,20,0,2,0,2,0
+Bandeau_Enonce,bandeau,Defile,36,0,2,0,8,0,3,0,2,0
 Bandeau_Enonce,bandeau,Bandeau.BannerPanel,161,0,0,0,46,0,11,0,11,0
 Bandeau_Enonce,bandeau,Scenario,51,0,2,0,12,0,5,0,4,0

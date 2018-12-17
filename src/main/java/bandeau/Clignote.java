@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author mkamdom
  */
-public class Clignote extends TypeEffect{
+public class Clignote extends TypeEffect {
 
     public Clignote(String m, int del) {
         super(m, del);
@@ -19,15 +19,15 @@ public class Clignote extends TypeEffect{
 
     @Override
     public void AfficherSur(Bandeau b) {
-           b.setBackground(Color.WHITE);
-           b.setForeground(Color.BLACK);
-           b.setMessage(message);
-           b.sleep(del);
-           b.setMessage("");
-           b.sleep(del);
-           b.setMessage(message);
-           b.sleep(del);
-       
+        b.setBackground(Color.WHITE);
+        b.setForeground(Color.BLACK);
+        b.setMessage(message);
+        b.sleep(del);
+        b.setMessage("");
+        b.sleep(del);
+        b.setMessage(message);
+        b.sleep(del);
+
     }
-   
+
 }

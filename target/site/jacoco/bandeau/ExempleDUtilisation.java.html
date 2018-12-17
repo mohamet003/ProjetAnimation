@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExempleDUtilisation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bandeau_Enonce</a> &gt; <a href="index.source.html" class="el_package">bandeau</a> &gt; <span class="el_source">ExempleDUtilisation.java</span></div><h1>ExempleDUtilisation.java</h1><pre class="source lang-java linenums">package bandeau;
 
-import java.awt.Font;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+<span class="nc" id="L3">public class ExempleDUtilisation {</span>
 
-<span class="nc" id="L8">public class ExempleDUtilisation {</span>
-<span class="nc" id="L9">    private final Bandeau monBandeau = new Bandeau();</span>
-    
+<span class="nc" id="L5">    private final Bandeau monBandeau = new Bandeau();</span>
+
     public static void main(String[] args) {
-<span class="nc" id="L12">	    new ExempleDUtilisation().exemple();</span>
-<span class="nc" id="L13">    }</span>
-    
+<span class="nc" id="L8">        new ExempleDUtilisation().exemple();</span>
+<span class="nc" id="L9">    }</span>
 
     public void exemple() {
-        
-        
-<span class="nc" id="L19">        Scenario s = new Scenario();</span>
-<span class="nc" id="L20">        RotationZoom rotationZoom = new RotationZoom(&quot;Bonjour !&quot;,50);</span>
-<span class="nc" id="L21">        Rainbow r = new Rainbow(&quot;mes couleurs&quot;,500);</span>
-<span class="nc" id="L22">        LettreOneByOne byOne = new LettreOneByOne(&quot;One by One !&quot;,300);</span>
-<span class="nc" id="L23">        JeuxDuPendu duPendu = new JeuxDuPendu(&quot;Hello !&quot;, 500);</span>
-        
-<span class="nc" id="L25">        s.AddEffect(duPendu,2);</span>
-<span class="nc" id="L26">        s.AddEffect(rotationZoom, 1);</span>
-<span class="nc" id="L27">        s.AddEffect(byOne, 2);</span>
-<span class="nc" id="L28">        s.AddEffect(r, 1);</span>
+
+<span class="nc" id="L13">        Scenario s = new Scenario();</span>
+
+<span class="nc" id="L15">        RotationZoom rotationZoom = new RotationZoom(&quot;Bienvenu !&quot;, 50);</span>
+<span class="nc" id="L16">        Rainbow r = new Rainbow(&quot;Rainbow !&quot;, 500);</span>
+<span class="nc" id="L17">        LettreOneByOne byOne = new LettreOneByOne(&quot;One by One !&quot;, 300);</span>
+<span class="nc" id="L18">        JeuxDuPendu duPendu = new JeuxDuPendu(&quot;Hello le monde !&quot;, 500);</span>
+<span class="nc" id="L19">        Clignote c = new Clignote(&quot;Je clignote !&quot;, 200);</span>
+<span class="nc" id="L20">        Defile d = new Defile(&quot;Aurevoir&quot;, 100);</span>
+
+<span class="nc" id="L22">        s.AddEffect(duPendu, 1);</span>
+<span class="nc" id="L23">        s.AddEffect(rotationZoom, 1);</span>
+<span class="nc" id="L24">        s.AddEffect(byOne, 1);</span>
+<span class="nc" id="L25">        s.AddEffect(r, 1);</span>
+<span class="nc" id="L26">        s.AddEffect(c, 10);</span>
+<span class="nc" id="L27">        s.AddEffect(d, 1);</span>
+
 <span class="nc" id="L29">        s.playOn(monBandeau);</span>
-        
-        
+
         /*
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
@@ -73,7 +72,7 @@ import java.util.Random;
 		monBandeau.setForeground(fore);
 		monBandeau.setBackground(back);
 		monBandeau.setMessage(&quot;Termine&quot;);*/
-		//System.exit(0);
-<span class="nc" id="L77">   }</span>
+        //System.exit(0);
+<span class="nc" id="L76">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

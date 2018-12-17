@@ -14,200 +14,201 @@ import java.awt.FontMetrics;
 
 public class Bandeau {
 
-	static class BannerPanel extends JPanel {
+    static class BannerPanel extends JPanel {
 
-<span class="nc" id="L19">		private static final AffineTransform INDENTITYTRANSFORM = new AffineTransform();</span>
-<span class="nc" id="L20">		private static final RenderingHints ANTIALIASING = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);</span>
+<span class="nc" id="L19">        private static final AffineTransform INDENTITYTRANSFORM = new AffineTransform();</span>
+<span class="nc" id="L20">        private static final RenderingHints ANTIALIASING = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);</span>
 
-<span class="nc" id="L22">		private String myMessage = &quot;Hello World !&quot;;</span>
-<span class="nc" id="L23">		private double myRotation = 0D;</span>
+<span class="nc" id="L22">        private String myMessage = &quot;Hello World !&quot;;</span>
+<span class="nc" id="L23">        private double myRotation = 0D;</span>
 
-		public BannerPanel() {
-<span class="nc" id="L26">			super();</span>
-<span class="nc" id="L27">			setForeground(Color.black);</span>
-<span class="nc" id="L28">			setBackground(Color.white);</span>
-<span class="nc" id="L29">			setFont(new Font(null, Font.BOLD, 25));</span>
-<span class="nc" id="L30">		}</span>
+        public BannerPanel() {
+<span class="nc" id="L26">            super();</span>
+<span class="nc" id="L27">            setForeground(Color.black);</span>
+<span class="nc" id="L28">            setBackground(Color.white);</span>
+<span class="nc" id="L29">            setFont(new Font(null, Font.BOLD, 25));</span>
+<span class="nc" id="L30">        }</span>
 
-		public void setMessage(String message) {
-<span class="nc" id="L33">			myMessage = message;</span>
-<span class="nc" id="L34">			repaint();</span>
-<span class="nc" id="L35">		}</span>
+        public void setMessage(String message) {
+<span class="nc" id="L33">            myMessage = message;</span>
+<span class="nc" id="L34">            repaint();</span>
+<span class="nc" id="L35">        }</span>
 
-		public String getMessage() {
-<span class="nc" id="L38">			return myMessage;</span>
-		}
+        public String getMessage() {
+<span class="nc" id="L38">            return myMessage;</span>
+        }
 
-		public void setFont(Font f) {
-<span class="nc" id="L42">			super.setFont(f);</span>
-<span class="nc" id="L43">			repaint();</span>
-<span class="nc" id="L44">		}</span>
+        public void setFont(Font f) {
+<span class="nc" id="L42">            super.setFont(f);</span>
+<span class="nc" id="L43">            repaint();</span>
+<span class="nc" id="L44">        }</span>
 
-		public void setRotation(double theta) {
-<span class="nc" id="L47">			myRotation = theta;</span>
-<span class="nc" id="L48">			repaint();</span>
-<span class="nc" id="L49">		}</span>
+        public void setRotation(double theta) {
+<span class="nc" id="L47">            myRotation = theta;</span>
+<span class="nc" id="L48">            repaint();</span>
+<span class="nc" id="L49">        }</span>
 
-		public double getRotation() {
-<span class="nc" id="L52">			return myRotation;</span>
-		}
+        public double getRotation() {
+<span class="nc" id="L52">            return myRotation;</span>
+        }
 
-		public void setForeground(Color c) {
-<span class="nc" id="L56">			super.setForeground(c);</span>
-<span class="nc" id="L57">			repaint();</span>
-<span class="nc" id="L58">		}</span>
+        public void setForeground(Color c) {
+<span class="nc" id="L56">            super.setForeground(c);</span>
+<span class="nc" id="L57">            repaint();</span>
+<span class="nc" id="L58">        }</span>
 
-		public void setBackground(Color c) {
-<span class="nc" id="L61">			super.setBackground(c);</span>
-<span class="nc" id="L62">			repaint();</span>
-<span class="nc" id="L63">		}</span>
+        public void setBackground(Color c) {
+<span class="nc" id="L61">            super.setBackground(c);</span>
+<span class="nc" id="L62">            repaint();</span>
+<span class="nc" id="L63">        }</span>
 
-		public void sleep(int millis) {
-			try {
-<span class="nc" id="L67">				Thread.sleep(millis);</span>
-<span class="nc" id="L68">			} catch (InterruptedException ex) {</span>
-<span class="nc" id="L69">			}</span>
-<span class="nc" id="L70">		}</span>
+        public void sleep(int millis) {
+            try {
+<span class="nc" id="L67">                Thread.sleep(millis);</span>
+<span class="nc" id="L68">            } catch (InterruptedException ex) {</span>
+<span class="nc" id="L69">            }</span>
+<span class="nc" id="L70">        }</span>
 
-		public void paint(Graphics g) {
-<span class="nc" id="L73">			super.paint(g);</span>
-<span class="nc" id="L74">			Rectangle r = getBounds();</span>
-<span class="nc" id="L75">			Graphics2D g2 = (Graphics2D) g;</span>
-<span class="nc" id="L76">			g2.setRenderingHints(ANTIALIASING);</span>
-<span class="nc" id="L77">			g2.setTransform(INDENTITYTRANSFORM);</span>
-<span class="nc" id="L78">			g2.setColor(getBackground());</span>
-<span class="nc" id="L79">			g2.fillRect(r.x, r.y, r.width, r.height);</span>
-<span class="nc" id="L80">			g2.rotate(myRotation, r.getCenterX(), r.getCenterY());</span>
-<span class="nc" id="L81">			g2.setColor(getForeground());</span>
-<span class="nc" id="L82">			setFont(getFont());</span>
-<span class="nc" id="L83">			FontMetrics m = getFontMetrics(getFont());</span>
-<span class="nc" id="L84">			Rectangle rect = m.getStringBounds(myMessage, g).getBounds();</span>
-<span class="nc" id="L85">			int x = (r.width - rect.width) / 2;</span>
-<span class="nc" id="L86">			int y = (r.height - rect.height) / 2;</span>
-<span class="nc" id="L87">			g2.drawString(myMessage, x, y + rect.height / 2);</span>
-<span class="nc" id="L88">		}</span>
-	}
+        public void paint(Graphics g) {
+<span class="nc" id="L73">            super.paint(g);</span>
+<span class="nc" id="L74">            Rectangle r = getBounds();</span>
+<span class="nc" id="L75">            Graphics2D g2 = (Graphics2D) g;</span>
+<span class="nc" id="L76">            g2.setRenderingHints(ANTIALIASING);</span>
+<span class="nc" id="L77">            g2.setTransform(INDENTITYTRANSFORM);</span>
+<span class="nc" id="L78">            g2.setColor(getBackground());</span>
+<span class="nc" id="L79">            g2.fillRect(r.x, r.y, r.width, r.height);</span>
+<span class="nc" id="L80">            g2.rotate(myRotation, r.getCenterX(), r.getCenterY());</span>
+<span class="nc" id="L81">            g2.setColor(getForeground());</span>
+<span class="nc" id="L82">            setFont(getFont());</span>
+<span class="nc" id="L83">            FontMetrics m = getFontMetrics(getFont());</span>
+<span class="nc" id="L84">            Rectangle rect = m.getStringBounds(myMessage, g).getBounds();</span>
+<span class="nc" id="L85">            int x = (r.width - rect.width) / 2;</span>
+<span class="nc" id="L86">            int y = (r.height - rect.height) / 2;</span>
+<span class="nc" id="L87">            g2.drawString(myMessage, x, y + rect.height / 2);</span>
+<span class="nc" id="L88">        }</span>
+    }
 
-	private final BannerPanel myPanel;
+    private final BannerPanel myPanel;
 
-<span class="nc" id="L93">	public Bandeau() {</span>
-<span class="nc" id="L94">		myPanel = new BannerPanel();</span>
-<span class="nc" id="L95">		javax.swing.SwingUtilities.invokeLater(</span>
-<span class="nc" id="L96">			new Runnable() {</span>
-			@Override
-			public void run() {
-<span class="nc" id="L99">				JFrame frame = new JFrame(&quot;Publicite&quot;);</span>
-<span class="nc" id="L100">				frame.getContentPane().setLayout(new BorderLayout());</span>
-<span class="nc" id="L101">				frame.getContentPane().add(myPanel, BorderLayout.CENTER);</span>
-<span class="nc" id="L102">				frame.setSize(new Dimension(400, 300));</span>
-<span class="nc" id="L103">				frame.setVisible(true);</span>
-<span class="nc" id="L104">			}</span>
-		});
-<span class="nc" id="L106">	}</span>
+<span class="nc" id="L93">    public Bandeau() {</span>
+<span class="nc" id="L94">        myPanel = new BannerPanel();</span>
+<span class="nc" id="L95">        javax.swing.SwingUtilities.invokeLater(</span>
+<span class="nc" id="L96">                new Runnable() {</span>
+            @Override
+            public void run() {
+<span class="nc" id="L99">                JFrame frame = new JFrame(&quot;Publicite&quot;);</span>
+<span class="nc" id="L100">                frame.getContentPane().setLayout(new BorderLayout());</span>
+<span class="nc" id="L101">                frame.getContentPane().add(myPanel, BorderLayout.CENTER);</span>
+<span class="nc" id="L102">                frame.setSize(new Dimension(400, 300));</span>
+<span class="nc" id="L103">                frame.setVisible(true);</span>
+<span class="nc" id="L104">            }</span>
+        });
+<span class="nc" id="L106">    }</span>
 
-	/**
-	 * Connaitre le message affiche dans le bandeau
-	 *
-	 * @return String le message courant
-	 */
-	public String getMessage() {
-<span class="nc" id="L114">		return myPanel.getMessage();</span>
-	}
+    /**
+     * Connaitre le message affiche dans le bandeau
+     *
+     * @return String le message courant
+     */
+    public String getMessage() {
+<span class="nc" id="L114">        return myPanel.getMessage();</span>
+    }
 
-	/**
-	 * Definit le message affiche dans le bandeau
-	 *
-	 * @param message String Le message qui sera affiche (centre dans le bandeau)
-	 */
-	public void setMessage(String message) {
-<span class="nc" id="L123">		myPanel.setMessage(message);</span>
-<span class="nc" id="L124">	}</span>
+    /**
+     * Definit le message affiche dans le bandeau
+     *
+     * @param message String Le message qui sera affiche (centre dans le
+     * bandeau)
+     */
+    public void setMessage(String message) {
+<span class="nc" id="L124">        myPanel.setMessage(message);</span>
+<span class="nc" id="L125">    }</span>
 
-	/**
-	 * Connaître l'angle de rotation du texte
-	 *
-	 * @return double l'angle courant en radians
-	 */
-	public double getRotation() {
-<span class="nc" id="L132">		return myPanel.getRotation();</span>
-	}
+    /**
+     * Connaître l'angle de rotation du texte
+     *
+     * @return double l'angle courant en radians
+     */
+    public double getRotation() {
+<span class="nc" id="L133">        return myPanel.getRotation();</span>
+    }
 
-	/**
-	 * Definir l'angle de rotation du texte dans le bandeau&lt;br&gt;
-	 * exemple: &lt;br&gt;&lt;code&gt;setRotation(Math.PI / 2); // 45 °&lt;/code&gt;
-	 *
-	 * @param theta double l'angle en radians
-	 */
-	public void setRotation(double theta) {
-<span class="nc" id="L142">		myPanel.setRotation(theta);</span>
-<span class="nc" id="L143">	}</span>
+    /**
+     * Definir l'angle de rotation du texte dans le bandeau&lt;br&gt;
+     * exemple: &lt;br&gt;&lt;code&gt;setRotation(Math.PI / 2); // 45 °&lt;/code&gt;
+     *
+     * @param theta double l'angle en radians
+     */
+    public void setRotation(double theta) {
+<span class="nc" id="L143">        myPanel.setRotation(theta);</span>
+<span class="nc" id="L144">    }</span>
 
-	/**
-	 * Connaître la couleur de fond
-	 *
-	 * @return Color la couleur de fond
-	 */
-	public Color getBackground() {
-<span class="nc" id="L151">		return myPanel.getBackground();</span>
-	}
+    /**
+     * Connaître la couleur de fond
+     *
+     * @return Color la couleur de fond
+     */
+    public Color getBackground() {
+<span class="nc" id="L152">        return myPanel.getBackground();</span>
+    }
 
-	/**
-	 * Definir la couleur de fond a utiliser&lt;br&gt;
-	 * exemple: &lt;br&gt;&lt;code&gt;setBackground(Color.blue);&lt;/code&gt;
-	 *
-	 * @param c Color la nouvelle couleur
-	 */
-	public void setBackground(Color c) {
-<span class="nc" id="L161">		myPanel.setBackground(c);</span>
-<span class="nc" id="L162">	}</span>
+    /**
+     * Definir la couleur de fond a utiliser&lt;br&gt;
+     * exemple: &lt;br&gt;&lt;code&gt;setBackground(Color.blue);&lt;/code&gt;
+     *
+     * @param c Color la nouvelle couleur
+     */
+    public void setBackground(Color c) {
+<span class="nc" id="L162">        myPanel.setBackground(c);</span>
+<span class="nc" id="L163">    }</span>
 
-	/**
-	 * Connaître la police de caracteres utilisee
-	 *
-	 * @return Font la police de caracteres utilisee
-	 */
-	public Font getFont() {
-<span class="nc" id="L170">		return myPanel.getFont();</span>
-	}
+    /**
+     * Connaître la police de caracteres utilisee
+     *
+     * @return Font la police de caracteres utilisee
+     */
+    public Font getFont() {
+<span class="nc" id="L171">        return myPanel.getFont();</span>
+    }
 
-	/**
-	 * Definir la police de caractere utilisee&lt;br&gt;
-	 * exemple: &lt;br&gt;&lt;code&gt;setFont(new Font(&quot;Monospaced&quot;, Font.BOLD, 20));&lt;/code&gt;
-	 *
-	 * @param f Font La police a utiliser
-	 */
-	public void setFont(Font f) {
-<span class="nc" id="L180">		myPanel.setFont(f);</span>
-<span class="nc" id="L181">	}</span>
+    /**
+     * Definir la police de caractere utilisee&lt;br&gt;
+     * exemple: &lt;br&gt;&lt;code&gt;setFont(new Font(&quot;Monospaced&quot;, Font.BOLD, 20));&lt;/code&gt;
+     *
+     * @param f Font La police a utiliser
+     */
+    public void setFont(Font f) {
+<span class="nc" id="L181">        myPanel.setFont(f);</span>
+<span class="nc" id="L182">    }</span>
 
-	/**
-	 * Connaître la couleur d'affichage des caracteres
-	 *
-	 * @return Color la couleur d'affichage
-	 */
-	public Color getForeground() {
-<span class="nc" id="L189">		return myPanel.getForeground();</span>
-	}
+    /**
+     * Connaître la couleur d'affichage des caracteres
+     *
+     * @return Color la couleur d'affichage
+     */
+    public Color getForeground() {
+<span class="nc" id="L190">        return myPanel.getForeground();</span>
+    }
 
-	/**
-	 * Definir la couleur du texte a utiliser&lt;br&gt;
-	 * exemple: &lt;br&gt;&lt;code&gt;setForeground(Color.blue);&lt;/code&gt;
-	 *
-	 * @param c Color la nouvelle couleur
-	 */
-	public void setForeground(Color c) {
-<span class="nc" id="L199">		myPanel.setForeground(c);</span>
-<span class="nc" id="L200">	}</span>
+    /**
+     * Definir la couleur du texte a utiliser&lt;br&gt;
+     * exemple: &lt;br&gt;&lt;code&gt;setForeground(Color.blue);&lt;/code&gt;
+     *
+     * @param c Color la nouvelle couleur
+     */
+    public void setForeground(Color c) {
+<span class="nc" id="L200">        myPanel.setForeground(c);</span>
+<span class="nc" id="L201">    }</span>
 
-	/**
-	 * Faire une pause dans l'affichage&lt;br&gt;
-	 * exemple:&lt;br&gt;&lt;code&gt;sleep(1000); // Pause d'une seconde&lt;/code&gt;
-	 *
-	 * @param millis int le delai de pause en millisecondes
-	 */
-	public void sleep(int millis) {
-<span class="nc" id="L209">		myPanel.sleep(millis);</span>
-<span class="nc" id="L210">	}</span>
+    /**
+     * Faire une pause dans l'affichage&lt;br&gt;
+     * exemple:&lt;br&gt;&lt;code&gt;sleep(1000); // Pause d'une seconde&lt;/code&gt;
+     *
+     * @param millis int le delai de pause en millisecondes
+     */
+    public void sleep(int millis) {
+<span class="nc" id="L210">        myPanel.sleep(millis);</span>
+<span class="nc" id="L211">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

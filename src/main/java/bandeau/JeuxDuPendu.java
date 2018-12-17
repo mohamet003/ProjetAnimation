@@ -50,7 +50,7 @@ public class JeuxDuPendu extends TypeEffect {
 
             b.sleep(del);
         }
-        
+
     }
 
 }

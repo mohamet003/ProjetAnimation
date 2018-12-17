@@ -18,12 +18,11 @@ public class Defile extends TypeEffect {
     @Override
     public void AfficherSur(Bandeau b) {
         b.setMessage(message);
-        for (int i = 0; i <50; i++) {
-            message = " "+message;
+        for (int i = 0; i < 50; i++) {
+            message = " " + message;
             b.setMessage(message);
             b.sleep(del);
         }
     }
-     
-    
+
 }

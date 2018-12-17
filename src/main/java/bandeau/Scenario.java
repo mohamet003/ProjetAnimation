@@ -31,7 +31,7 @@ public class Scenario {
         ListeTypeDeffect.forEach(effect -> {
             for (int i = 0; i < listRepet.get(ListeTypeDeffect.indexOf(effect)); i++) {
                 effect.AfficherSur(b);
-                
+
             }
 
         });

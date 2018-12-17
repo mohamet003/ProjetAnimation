@@ -6,76 +6,37 @@
 package bandeau;
 
 import java.awt.Font;
-import java.io.File;
-<<<<<<< HEAD
-=======
-import java.util.Random;
->>>>>>> a5a1d99f6ab97b7c6c6953b8958cbd3f10b1ef28
-import javax.imageio.ImageIO;
 
 /**
  *
  * @author mkone03
  */
-public class LettreOneByOne extends TypeEffect{
+public class LettreOneByOne extends TypeEffect {
 
     public LettreOneByOne(String m, int del) {
-<<<<<<< HEAD
-<span class="nc" id="L19">        super(m, del);</span>
-<span class="nc" id="L20">    }</span>
-=======
-<span class="nc" id="L20">        super(m, del);</span>
-<span class="nc" id="L21">    }</span>
->>>>>>> a5a1d99f6ab97b7c6c6953b8958cbd3f10b1ef28
-
-
+<span class="nc" id="L17">        super(m, del);</span>
+<span class="nc" id="L18">    }</span>
 
     @Override
     public void AfficherSur(Bandeau b) {
-                    
-<<<<<<< HEAD
-<span class="nc" id="L27">            String sous_chaine=&quot;&quot;;</span>
-<span class="nc bnc" id="L28" title="All 2 branches missed.">            for (int i = 0; i &lt;= message.length()-1; i++) {</span>
-<span class="nc" id="L29">                sous_chaine += message.substring(i,i+1);</span>
-<span class="nc" id="L30">                int a = (int) message.substring(i,i+1).charAt(0);</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">                if (a!=32) {</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">                    for (int j = 3; j &lt; 30; j++) {         </span>
-<span class="nc" id="L33">                    b.setFont(new Font(&quot;Dialog&quot;, Font.BOLD,20+j));</span>
-<span class="nc" id="L34">                    b.setMessage(sous_chaine);</span>
-<span class="nc" id="L35">                    b.sleep((int) (del*0.10));</span>
-                }
-<span class="nc" id="L37">                    b.sleep(del);</span>
-                }else{
-<span class="nc" id="L39">                    b.setMessage(sous_chaine);</span>
-                }
 
-                
+<span class="nc" id="L23">        String sous_chaine = &quot;&quot;;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        for (int i = 0; i &lt;= message.length() - 1; i++) {</span>
 
-                
-                
-            }
-<span class="nc" id="L47">    }</span>
-=======
-<span class="nc" id="L28">            String sous_chaine=&quot;&quot;;</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">            for (int i = 0; i &lt;= message.length()-1; i++) {</span>
-           
-<span class="nc" id="L31">                sous_chaine += message.substring(i,i+1);</span>
-<span class="nc" id="L32">                int a = (int) message.substring(i,i+1).charAt(0);</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">                if (a!=32) {</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">                    for (int j = 3; j &lt; 30; j++) {         </span>
-<span class="nc" id="L35">                    b.setFont(new Font(&quot;Dialog&quot;, Font.BOLD,20+j));</span>
-<span class="nc" id="L36">                    b.setMessage(sous_chaine);</span>
-<span class="nc" id="L37">                    b.sleep((int) (del*0.10));</span>
+<span class="nc" id="L26">            sous_chaine += message.substring(i, i + 1);</span>
+<span class="nc" id="L27">            int a = (int) message.substring(i, i + 1).charAt(0);</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">            if (a != 32) {</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">                for (int j = 3; j &lt; 30; j++) {</span>
+<span class="nc" id="L30">                    b.setFont(new Font(&quot;Dialog&quot;, Font.BOLD, 20 + j));</span>
+<span class="nc" id="L31">                    b.setMessage(sous_chaine);</span>
+<span class="nc" id="L32">                    b.sleep((int) (del * 0.10));</span>
                 }
-<span class="nc" id="L39">                    b.sleep(del);</span>
-                }else{
-<span class="nc" id="L41">                    b.setMessage(sous_chaine);</span>
-                }
+<span class="nc" id="L34">                b.sleep(del);</span>
+            } else {
+<span class="nc" id="L36">                b.setMessage(sous_chaine);</span>
             }
-<span class="nc" id="L44">    }</span>
->>>>>>> a5a1d99f6ab97b7c6c6953b8958cbd3f10b1ef28
-    
-    
-    
+        }
+<span class="nc" id="L39">    }</span>
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
